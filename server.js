@@ -34,8 +34,15 @@ hbs.registerHelper("screamIt", (text) => {
 app.get("/", (req, res) => {
 	res.render("home.hbs", {
 		pageTitle: "Home Page",
-		userName: "Ravi Ojha",
 		welcomeMessage: "Home Page"
+	});
+});
+
+app.get("/project", (req, res) => {
+	res.render("projects.hbs", {
+		pageTitle: "Projects Page",
+		githubProject: "https://github.com/rbojha/nt/",
+		welcomeMessage: "You have done great"
 	});
 });
 
